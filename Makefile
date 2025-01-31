@@ -9,7 +9,7 @@ SOURCES = $(wildcard $(SRCDIR)/*.c)
 
 OBJECTS = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
-TARGET = $(BINDIR)/main
+TARGET = $(BINDIR)/$(notdir $(SOURCES:.c=))
 
 all: $(TARGET)
 
